@@ -20,8 +20,7 @@ public void testmain() {
     ByteArrayOutputStream bos = new ByteArrayOutputStream();
     System.setOut(new PrintStream(bos));
     App.main(null);
-    System.out.println("#"+bos.toString()+"#");
-    //Assert.assertTrue("Hello-World".equals(bos.toString()));
+    Assert.assertTrue(bos.toString().contains("Hello-World"));
     System.setOut(originalOut);
         }
 
