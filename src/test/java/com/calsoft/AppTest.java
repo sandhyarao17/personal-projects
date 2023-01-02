@@ -9,14 +9,11 @@ import org.junit.*;
  */
 public class AppTest
 {
-    public void testApp()
-    {
-        assertTrue( true );
-    }
 
     @Test
 public void testmain() {
-    App.main(null);
+       
+        App.main(null);
     //Assert.assertTrue(bos.toString().contains("Hello-World"));
         }
     @Test
@@ -26,8 +23,9 @@ public void testmain2() {
         }
     @Test
 public void testmain3() {
+     App a = new App();
+        Assert.assertEquals("hello", a.display());
     Assert.assertEquals("hello", App.display());
         }
 
 }
-
