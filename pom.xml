@@ -87,9 +87,7 @@
               <execution>
                <id>report1</id>
                <phase>test</phase>
-                  <goals>
-                   <goal>report1</goal>
-                  </goals>
+                
                   <configuration>
                    <dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
                    <outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
