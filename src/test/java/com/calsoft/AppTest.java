@@ -9,20 +9,22 @@ import org.junit.*;
  */
 public class AppTest 
 {
-    public void testApp()
-    {
-        assertTrue( true );
-    }
 
     @Test
 public void testmain() {
-    PrintStream originalOut = System.out; 
-    ByteArrayOutputStream bos = new ByteArrayOutputStream();
-    System.setOut(new PrintStream(bos));
-    App.main(null);
-    System.out.println("#"+bos.toString()+"#");
-    //Assert.assertTrue("Hello-World".equals(bos.toString()));
-    System.setOut(originalOut);
+	App a = new App();
+	a.main(null);
+        App.main(null);
+    //Assert.assertTrue(bos.toString().contains("Hello-World"));
+	}
+    @Test
+public void testmain2() {
+    App.main(new String[] {"1", "2"});
+    //Assert.assertTrue(bos.toString().contains("Hello-World"));
+	}
+    @Test
+public void testmain3() {
+    Assert.assertEquals("hello", App.display());
 	}
 
 }
